@@ -2,26 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 2rem;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.container-image:nth-of-type(1n) {
+  --span-x: 1;
+  --span-y: 2;
+}
+
+.container-image:nth-of-type(2n) {
+  --span-x: 2;
+  --span-y: 2;
+}
+
+.container-image:nth-of-type(3n) {
+  --span-x: 1;
+  --span-y: 3;
+}
+
+.container-image:nth-of-type(2n + 1) {
+  --span-x: 1;
+  --span-y: 1;
+}
+
+.container-image.full {
+  --span-x: 4;
+  --span-y: 4;
+}
+
+
+.container-image {
+  grid-column: span var(--span-x, 1);
+  grid-row: span var(--span-y, 1);
+  animation: enter both ease-in-out;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+@keyframes enter {
+  from {
+    translate: 0 100%;
+    scale: 0.25;
+    opacity: 0.5;
+  }
+}
+
+@keyframes exit {
+  to {
+    translate: 0 -15vh;
+    opacity: 0.5;
+  }
 }
