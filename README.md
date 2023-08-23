@@ -128,7 +128,7 @@ Project Link: [https://github.com/julianosirtori/gallery](https://github.com/jul
 [issues-shield]: https://img.shields.io/github/issues/julianosirtori/gallery.svg?style=for-the-badge
 [issues-url]: https://github.com/julianosirtori/gallery/issues
 [license-shield]: https://img.shields.io/github/license/julianosirtori/gallery.svg?style=for-the-badge
-[license-url]: https://github.com/julianosirtori/gallery/blob/master/LICENSE.txt
+[license-url]: https://github.com/julianosirtori/gallery/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/juliano-sirtori
 [product-screenshot]: assets/screenshot.gif
